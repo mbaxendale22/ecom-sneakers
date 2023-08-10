@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="./javascript/index.js" type="module"></script>
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <nav>
+        <div class="nav-layout">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <div id="open-mobile-nav" class="burger-menu">
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                    </div>
+                    <h3>sneakers</h3>
+                    <ul>
+                        <li>Collections</li>
+                        <li>Men</li>
+                        <li>Women</li>
+                        <li>About</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <img class="cart-icon" src="./images/icon-cart.svg" />
+                    <img class="avatar" src="./images/image-avatar.png" />
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="mobile-nav" class="mobile-nav">
+        <div class="mobile-nav-content">
+            <img id="close-mobile-nav" src="./images/icon-close.svg" />
+            <ul>
+                <li>Collections</li>
+                <li>Men</li>
+                <li>Women</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <div class="main-layout">
+
+            <section class="left-side">
+                <div class="main-product-container">
+                    <div class="gallery-button gallery-button-left">
+                        <img src="./images/icon-previous.svg" />
+                    </div>
+                    <div class="gallery-button gallery-button-right">
+                        <img src="./images/icon-next.svg" />
+                    </div>
+                    <img id="main-img-1" class="main-product main-product-active" src="./images/image-product-1.jpg" alt="">
+                    <img id="main-img-2" class="main-product" src="./images/image-product-2.jpg" alt="">
+                    <img id="main-img-3" class="main-product" src="./images/image-product-3.jpg" alt="">
+                    <img id="main-img-4" class="main-product" src="./images/image-product-4.jpg" alt="">
+                </div>
+                <div class="thumbnail-container">
+                    <img id="thumb-1" class="thumbnail thumbnail-active" src="./images/image-product-1-thumbnail.jpg"
+                        alt="thumbnail of image 1" />
+                    <img id="thumb-2" class="thumbnail" src="./images/image-product-2-thumbnail.jpg"
+                        alt="thumbnail of image 2" />
+                    <img id="thumb-3" class="thumbnail" src="./images/image-product-3-thumbnail.jpg"
+                        alt="thumbnail of image 3" />
+                    <img id="thumb-4" class="thumbnail" src="./images/image-product-4-thumbnail.jpg"
+                        alt="thumbnail of image 4" />
+                </div>
+            </section>
+            <section class="right-side">
+                <div class="right-side-top">
+
+                    <h3>SNEAKER COMPANY</h3>
+                    <h2>Fall Limited Edition Sneakers</h2>
+                    <p class="description">These low-profile sneakers are your perfect casual wear companion. Featuring
+                        a
+                        durable rubber outer sole,
+                        they'll withstand everything the weather can offer.</p>
+
+                    <div class="price-container">
+                        <div class="price-container-left-block">
+                            <p>$125.00</p>
+                            <div class="reduction">
+                                50%
+                            </div>
+
+                        </div>
+                        <p class="original-price-small">$250.00</p>
+                    </div>
+                    <p class="original-price">$250.00</p>
+
+                </div>
+
+                <div class="right-side-bottom">
+
+                    <div class="button-container">
+                        <div class="quantity-container">
+                            <button>-</button>
+                            <p>0</p>
+                            <button>+</button>
+                        </div>
+                        <button class="add-to-cart">
+                            <img src="./images/icon-cart-white.svg" alt="icon of a shopping cart">
+                            <p>Add to cart</p>
+                        </button>
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <div class="full-screen-overlay"></div>
+</body>
+
+</html>
