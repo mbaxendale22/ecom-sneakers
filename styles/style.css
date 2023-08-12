@@ -40,7 +40,7 @@ body {
 main {
     display: flex;
     justify-content: center;
-    height: 90vh;
+    height: 88vh;
 }
 
 .hidden {
@@ -229,8 +229,8 @@ main {
 
 /* lighthouse container */
 .lighthouse-main-product-container {
-    width: 50rem;
-    height: 50rem;
+    width: 45rem;
+    height: 45rem;
     margin-bottom: 2rem;
     cursor: pointer;
     position: relative;
@@ -277,7 +277,7 @@ main {
 
 .close-lighthouse {
     position: absolute;
-    top: -4rem;
+    top: -3rem;
     right: 0;
     cursor: pointer;
 }
@@ -312,7 +312,7 @@ main {
         justify-content: space-evenly;
     }
     .right-side h2 {
-        font-size: 4.1rem;
+        font-size: 3rem;
         font-weight: 700;
     }
 
@@ -379,6 +379,7 @@ main {
     }
 }
 
+
 @media screen and (max-width: 400px) {
     .left-side {
         height: 35%;
@@ -389,6 +390,10 @@ main {
         height: 65%;
         width: 100%;
         justify-content: space-between;
+    }
+
+    .right-side h2 {
+        font-size: 4.1rem;
     }
 
     .right-side-top {
@@ -413,6 +418,7 @@ main {
         max-width: 100%;
         height: auto;
         border-radius: 0;
+        aspect-ratio: 1.5 /1;
     }
 
     .thumbnail-container {
@@ -439,4 +445,5 @@ main {
     .gallery-button-right {
         right: 1rem;
     }
+    
 }
