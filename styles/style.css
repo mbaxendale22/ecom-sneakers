@@ -218,6 +218,10 @@ main {
     cursor: pointer;
 }
 
+.add-to-cart:hover {
+    opacity: 0.75;
+}
+
 .add-to-cart p {
     margin-left: 1.5rem;
 }
