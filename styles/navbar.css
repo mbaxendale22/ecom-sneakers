@@ -34,7 +34,7 @@ nav {
 .nav-left ul {
     display: flex;
     height: 100%;
-    color: var(--text-gray)
+    color: var(--text-gray);
 }
 
 .nav-left li {
@@ -57,11 +57,23 @@ nav {
     width: 33%;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
+}
+
+.avatar-container {
+    width: 5rem;
+    margin-left: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .avatar {
-    width: 5rem;
-    margin-left: 3rem;
+    width: 100%;
+    height: auto;
+}
+
+.avatar-container:hover {
+    border: 2px solid var(--primary-orange);
 }
 
 .burger-menu {
@@ -105,6 +117,90 @@ nav {
     cursor: pointer;
 }
 
+.cart-container {
+    border-radius: 1rem;
+    background-color: #ffffff;
+    width: 34rem;
+    height: 0rem;
+    margin-right: 2rem;
+    position: absolute;
+    top: 5rem;
+    right: -4rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
+    z-index: 2;
+}
+
+.cart-top {
+    display: none;
+    padding: 2rem;
+    border-bottom: 1px solid #979797;
+    height: 2.5rem;
+}
+.cart-top h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.cart-bottom {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 18rem;
+}
+
+.cart-icon {
+    cursor: pointer;
+}
+
+.cart-product-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+.checkout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #ffffff;
+    background-color: var(--primary-orange);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.cart-product-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-thumbnail {
+    width: 5rem;
+    height: 5rem;
+}
+.cart-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+.delete-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+}
+.cart-icon img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
 @media screen and (max-width: 650px) {
     .nav-layout {
         border: none;
@@ -134,7 +230,7 @@ nav {
         background-color: black;
     }
 
-    .avatar {
+    .avatar-container {
         width: 4rem;
         margin-right: 2rem;
     }

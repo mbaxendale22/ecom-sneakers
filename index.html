@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="product page for a sneakers shop">
     <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -43,7 +44,39 @@
                 </div>
                 <div class="nav-right">
                     <img class="cart-icon" src="./images/icon-cart.svg" />
-                    <img class="avatar" src="./images/image-avatar.png" />
+                    <div class="avatar-container">
+                        <img class="avatar" src="./images/image-avatar.png" />
+                    </div>
+
+                    <div class="cart-container">
+                        <div class="cart-top">
+                            <h3>Cart</h3>
+                        </div>
+                        <div class="cart-bottom">
+                            <!-- <p>Your cart is empty</p> -->
+                            <div class="cart-product-container">
+                                <div class="cart-product-top">
+                                    <div class="cart-thumbnail">
+                                        <img src="./images/image-product-1-thumbnail.jpg" />
+
+                                    </div>
+                                    <div class="text-block">
+                                        <p>Fall Limited Edition Sneakers</p>
+                                        <p>$125 x 3<span>$375.00</span></p>
+                                    </div>
+                                    <div class="delete-icon">
+
+                                        <img src="./images/icon-delete.svg">
+                                    </div>
+                                </div>
+                                <button class="checkout">
+                                    <p>checkout</p>
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,9 +177,6 @@
 
 
 
-
-
-
     <div class="full-screen-overlay"></div>
     <!-- lighthouse gallery -->
     <section class="lighthouse-container">
@@ -158,16 +188,20 @@
             <div class="lighthouse-gallery-button lighthouse-gallery-button-right">
                 <img src="./images/icon-next.svg" />
             </div>
-            <img id="main-img-1" class="main-product main-product-active" src="./images/image-product-1.jpg" alt="image of a pair of shoes">
-            <img id="main-img-2" class="main-product lighthouse-img" src="./images/image-product-2.jpg" alt="image of a pair of shoes">
-            <img id="main-img-3" class="main-product lighthouse-img" src="./images/image-product-3.jpg" alt="image of a pair of shoes">
-            <img id="main-img-4" class="main-product lighthouse-img" src="./images/image-product-4.jpg" alt="image of a pair of shoes">
+            <img id="main-img-1" class="main-product main-product-active" src="./images/image-product-1.jpg"
+                alt="image of a pair of shoes">
+            <img id="main-img-2" class="main-product lighthouse-img" src="./images/image-product-2.jpg"
+                alt="image of a pair of shoes">
+            <img id="main-img-3" class="main-product lighthouse-img" src="./images/image-product-3.jpg"
+                alt="image of a pair of shoes">
+            <img id="main-img-4" class="main-product lighthouse-img" src="./images/image-product-4.jpg"
+                alt="image of a pair of shoes">
 
             <img src="./images/icon-close-white.svg" alt="cross to close image gallery" class="close-lighthouse">
         </div>
         <div class="lighthouse-thumbnail-container">
-            <img id="thumb-1" class="thumbnail thumbnail-active lighthouse-img" src="./images/image-product-1-thumbnail.jpg"
-                alt="thumbnail of image 1" />
+            <img id="thumb-1" class="thumbnail thumbnail-active lighthouse-img"
+                src="./images/image-product-1-thumbnail.jpg" alt="thumbnail of image 1" />
             <img id="thumb-2" class="thumbnail lighthouse-img" src="./images/image-product-2-thumbnail.jpg"
                 alt="thumbnail of image 2" />
             <img id="thumb-3" class="thumbnail lighthouse-img" src="./images/image-product-3-thumbnail.jpg"
@@ -176,7 +210,7 @@
                 alt="thumbnail of image 4" />
         </div>
 
-    </section> 
+    </section>
 </body>
 
 </html>

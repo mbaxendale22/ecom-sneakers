@@ -379,7 +379,6 @@ main {
     }
 }
 
-
 @media screen and (max-width: 400px) {
     .left-side {
         height: 35%;
@@ -412,13 +411,14 @@ main {
         width: 100%;
         max-height: 100%;
         position: relative;
+        overflow: hidden;
     }
 
     .main-product {
         max-width: 100%;
         height: auto;
         border-radius: 0;
-        aspect-ratio: 1.5 /1;
+        aspect-ratio: 1.75 / 1;
     }
 
     .thumbnail-container {

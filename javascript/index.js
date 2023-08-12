@@ -35,6 +35,11 @@ const productContainerArr = Array.from(mainProductContainer.children).filter(
     (el) => el.tagName === 'IMG'
 )
 
+const cartIcon = document.querySelector('.cart-icon')
+const cartContainer = document.querySelector('.cart-container')
+const cartTop = document.querySelector('.cart-top')
+const cartBottom = document.querySelector('.cart-bottom')
+
 function handleOpenMobileNav(e) {
     mobileNav.style.width = '66vw'
     const navContent = mobileNav.childNodes
@@ -44,7 +49,6 @@ function handleOpenMobileNav(e) {
 
     fsOverlay.style.display = 'block'
 }
-
 
 function handleCloseMobileNav() {
     const navContent = mobileNav.childNodes
@@ -86,7 +90,6 @@ function replaceMainImage(id) {
         }
     })
 }
-
 
 function handleGalleryClickForward(e) {
     const [curActiveImage] = productContainerArr.filter((image) =>
@@ -133,6 +136,18 @@ function handleGalleryClickBackwards(e) {
     }
 }
 
+function handleCardToggle() {
+    if (cartContainer.style.height === '') {
+        cartContainer.style.height = '25rem'
+        cartTop.style.display = 'block'
+        cartBottom.style.display = 'flex'
+        
+        return
+    }
+    cartContainer.style.height = ''
+    cartTop.style.display = 'none'
+    cartBottom.style.display = 'none'
+}
 
 // NAVBAR
 
@@ -156,3 +171,4 @@ lighthouseThumbnailContainer.addEventListener(
 // MAIN IMAGE GALLERY
 thumbnailContainer.addEventListener('click', handleThumbnailClick)
 mainProductContainer.addEventListener('click', handleOpenLighthouse)
+cartIcon.addEventListener('click', handleCardToggle)
