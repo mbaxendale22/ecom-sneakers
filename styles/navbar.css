@@ -149,6 +149,24 @@ nav {
     height: 18rem;
 }
 
+.cart-icon-container {
+    position: relative;
+}
+
+.product-indicator {
+    display: none;
+    background-color: var(--primary-orange);
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+    width: 2rem;
+    border-radius: 4rem;
+    position: absolute;
+    right: -0.5rem;
+    top: -0.4rem;
+    color:hsl(0, 100%, 100%)
+}
+
 .cart-icon {
     cursor: pointer;
 }
@@ -156,7 +174,7 @@ nav {
 .cart-product-container {
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 2rem;
@@ -194,11 +212,31 @@ nav {
     align-items: center;
     width: 5rem;
     height: 5rem;
+    cursor: pointer;
 }
 .cart-icon img {
     width: 100%;
     height: auto;
     border-radius: 1rem;
+}
+
+#empty-cart-msg {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color:var(--text-gray)
+}
+
+.text-block {
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+.text-block p:first-of-type {
+    margin-bottom: -1rem;
+}
+
+.text-block span {
+    color: hsl(0, 0%, 0%);
+    font-weight: 900;
 }
 
 @media screen and (max-width: 650px) {
@@ -223,7 +261,6 @@ nav {
         width: 2rem;
         cursor: pointer;
     }
-
     .burger-line {
         width: 1.2rem;
         height: 0.2rem;

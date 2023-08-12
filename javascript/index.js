@@ -5,17 +5,16 @@ import {
     handleLighthouseThumbnailClick,
 } from './lighthouse.js'
 
+import { handleCardToggle } from './cart.js'
+
 const mobileNav = document.getElementById('mobile-nav')
 const burgerMenu = document.getElementById('open-mobile-nav')
 const closeMobileNav = document.getElementById('close-mobile-nav')
 const fsOverlay = document.querySelector('.full-screen-overlay')
-const mobileNavList = document.getElementById('mobile-nav-list')
 const thumbnailContainer = document.querySelector('.thumbnail-container')
 const mainProductContainer = document.querySelector('.main-product-container')
-
 const forwardArrow = document.querySelector('.gallery-button-right')
 const backArrow = document.querySelector('.gallery-button-left')
-const galleryArrows = document.querySelectorAll('.gallery-button')
 const lighthouseContainer = document.querySelector('.lighthouse-container')
 const lighthouseForwardArrow = document.querySelector(
     '.lighthouse-gallery-button-right'
@@ -36,9 +35,6 @@ const productContainerArr = Array.from(mainProductContainer.children).filter(
 )
 
 const cartIcon = document.querySelector('.cart-icon')
-const cartContainer = document.querySelector('.cart-container')
-const cartTop = document.querySelector('.cart-top')
-const cartBottom = document.querySelector('.cart-bottom')
 
 function handleOpenMobileNav(e) {
     mobileNav.style.width = '66vw'
@@ -136,19 +132,6 @@ function handleGalleryClickBackwards(e) {
     }
 }
 
-function handleCardToggle() {
-    if (cartContainer.style.height === '') {
-        cartContainer.style.height = '25rem'
-        cartTop.style.display = 'block'
-        cartBottom.style.display = 'flex'
-        
-        return
-    }
-    cartContainer.style.height = ''
-    cartTop.style.display = 'none'
-    cartBottom.style.display = 'none'
-}
-
 // NAVBAR
 
 burgerMenu.addEventListener('click', handleOpenMobileNav)
@@ -171,4 +154,64 @@ lighthouseThumbnailContainer.addEventListener(
 // MAIN IMAGE GALLERY
 thumbnailContainer.addEventListener('click', handleThumbnailClick)
 mainProductContainer.addEventListener('click', handleOpenLighthouse)
+
+// CART
 cartIcon.addEventListener('click', handleCardToggle)
+
+// INCREASE / DECREASE PRODUCT
+
+const quantityDisplay = document.getElementById('quantity-display')
+const cartTextBlock = document.querySelector('.text-block')
+const cartProductContainer = document.querySelector('.cart-product-container')
+const emptyCartMsg = document.getElementById('empty-cart-msg')
+const buttonContainer = document.querySelector('.button-container')
+const deleteProduct = document.querySelector('.delete-icon')
+const productIndicator = document.querySelector('.product-indicator')
+
+function handleCart(e) {
+    let currAmount = parseInt(quantityDisplay.innerText)
+
+    switch (e.target.id) {
+        case 'increase-quantity':
+            currAmount++
+            quantityDisplay.innerText = currAmount
+            return
+        case 'decrease-quantity':
+            if (currAmount === 0) {
+                return
+            }
+            currAmount--
+            quantityDisplay.innerText = currAmount
+            return
+        case 'add-to-cart':
+            if (currAmount === 0) {
+                return
+            }
+            cartProductContainer.style.display = 'flex'
+            emptyCartMsg.style.display = 'none'
+
+            cartTextBlock.innerHTML = `
+            <p>Fall Limited Edition Sneakers</p>
+            <p>$125 x ${currAmount} <span>$${
+                currAmount * 125
+            }</span></p>        
+            `
+            console.log(productIndicator)
+            productIndicator.style.display = 'flex'
+            productIndicator.innerHTML = `
+                <p>${currAmount}</p>
+                `
+
+            return
+
+        default:
+            break
+    }
+}
+
+buttonContainer.addEventListener('click', handleCart)
+deleteProduct.addEventListener('click', () => {
+    cartProductContainer.style.display = 'none'
+    emptyCartMsg.style.display = 'block'
+    productIndicator.style.display = 'none'
+})
